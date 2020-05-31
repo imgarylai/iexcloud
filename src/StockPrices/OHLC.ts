@@ -1,7 +1,6 @@
-import { APIRequest } from "../IEXcloud";
 import { OHLC } from "../Interfaces";
+import { StockPricesApi } from "../API";
 
 export const ohlc = async (symbol: string): Promise<Partial<OHLC>> => {
-  const { data } = await APIRequest(`/stock/${symbol}/ohlc`);
-  return data;
+  return await StockPricesApi(symbol, "ohlc");
 };

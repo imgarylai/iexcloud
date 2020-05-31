@@ -1,9 +1,8 @@
-import { APIRequest } from "../IEXcloud";
 import { PreviousDayPrice } from "../Interfaces";
+import { StockPricesApi } from "../API";
 
 export const previous = async (
   symbol: string
 ): Promise<Partial<PreviousDayPrice>> => {
-  const { data } = await APIRequest(`/stock/${symbol}/previous`);
-  return data;
+  return await StockPricesApi(symbol, `previous`);
 };

@@ -1,10 +1,9 @@
-import { APIRequest } from "../IEXcloud";
+import { StockPricesApi } from "../API";
 import { DelayedQuote, DelayedQuoteOption } from "../Interfaces";
 
 export const delayedQuote = async (
   symbol: string,
   options: Partial<DelayedQuoteOption> = {}
 ): Promise<Partial<DelayedQuote>> => {
-  const { data } = await APIRequest(`/stock/${symbol}/delayed-quote`, options);
-  return data;
+  return await StockPricesApi(symbol, "delayed-quote", options);
 };

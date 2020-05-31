@@ -1,5 +1,5 @@
 import { config } from "dotenv";
 config();
 
-export * from "./IEXcloud";
+export * from "./API/core";
 export * from "./StockPrices";
