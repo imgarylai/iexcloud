@@ -1,5 +1,5 @@
 import { APIRequest } from "../IEXcloud";
-import { Range } from "../Tpyes";
+import { Range } from "../Types";
 import { HistoricalPrice, HistoricalPriceOption } from "../Interfaces";
 
 export const historicalPrice = async (
