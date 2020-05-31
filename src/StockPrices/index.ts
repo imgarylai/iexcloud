@@ -7,3 +7,4 @@ export * from "./OHLC";
 export * from "./PreviousDayPrice";
 export * from "./PriceOnly";
 export * from "./Quote";
+export * from "./VolumeByVenue";
