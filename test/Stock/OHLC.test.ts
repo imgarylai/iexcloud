@@ -1,4 +1,4 @@
-import { ohlc } from "../../src/StockPrices";
+import { ohlc } from "../../src/Stock";
 
 test("Stock Prices #olch", async () => {
   const symbol = "TWTR";

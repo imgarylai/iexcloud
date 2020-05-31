@@ -1,4 +1,4 @@
-import { previous } from "../../src/StockPrices";
+import { previous } from "../../src/Stock";
 
 test("Stock Prices #previous", async () => {
   const symbol = "TWTR";

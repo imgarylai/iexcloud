@@ -1,4 +1,4 @@
-import { largestTrades } from "../../src/StockPrices";
+import { largestTrades } from "../../src/Stock";
 
 test("Stock Prices #largestTrades", async () => {
   const symbol = "TWTR";

@@ -1,4 +1,4 @@
-import { price } from "../../src/StockPrices";
+import { price } from "../../src/Stock";
 
 test("Stock Prices #price", async () => {
   const symbol = "TWTR";

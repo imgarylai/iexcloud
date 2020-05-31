@@ -1,7 +1,7 @@
-import { volumeByVenue } from "../../src/StockPrices";
+import { intradayPrices } from "../../src/Stock";
 
 test("Stock Prices #intradayPrices", async () => {
   const symbol = "TWTR";
-  const data = await volumeByVenue(symbol.toLowerCase());
+  const data = await intradayPrices(symbol.toLowerCase());
   expect(data).not.toEqual(null);
 });

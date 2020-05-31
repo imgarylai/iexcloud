@@ -1,4 +1,4 @@
-import { delayedQuote } from "../../src/StockPrices";
+import { delayedQuote } from "../../src/Stock";
 
 test("Stock Prices #delayedQuote", async () => {
   const symbol = "TWTR";

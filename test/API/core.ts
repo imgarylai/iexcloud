@@ -1,5 +1,5 @@
 import * as process from "process";
-import { APIRequest, getBaseURL } from "../src";
+import { APIRequest, getBaseURL } from "../../src";
 
 describe("get endpoint", () => {
   const OLD_ENV = process.env;

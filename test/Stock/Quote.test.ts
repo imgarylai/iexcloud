@@ -1,4 +1,4 @@
-import { quote } from "../../src/StockPrices";
+import { quote } from "../../src/Stock";
 
 describe("get quote", () => {
   test("Stock Prices #quote", async () => {

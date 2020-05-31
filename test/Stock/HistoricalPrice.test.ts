@@ -1,4 +1,4 @@
-import { historicalPrice } from "../../src/StockPrices";
+import { historicalPrice } from "../../src/Stock";
 describe("historical price", () => {
   test("Stock Prices #historicalPrice", async () => {
     const symbol = "TWTR";
