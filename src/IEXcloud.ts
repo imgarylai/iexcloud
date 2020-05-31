@@ -1,13 +1,14 @@
+import * as process from "process";
 import axios, { AxiosResponse } from "axios";
 import * as dotenv from "dotenv";
 dotenv.config();
 
 export const getBaseURL = (
-  iex_env = "sandbox",
-  iex_version = "stable"
+  iexEnv = "sandbox",
+  iexVersion = "stable"
 ): { baseURL: string } => {
-  const IEX_ENV = process.env.IEX_ENV || iex_env;
-  const IEX_VERSION = process.env.IEX_VERSION || iex_version;
+  const IEX_ENV = process.env.IEX_ENV || iexEnv;
+  const IEX_VERSION = process.env.IEX_VERSION || iexVersion;
 
   const baseURL = `https://${IEX_ENV}.iexapis.com/${IEX_VERSION}`;
   return { baseURL };

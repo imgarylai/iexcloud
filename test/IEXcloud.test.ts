@@ -1,3 +1,4 @@
+import * as process from "process";
 import { APIRequest, getBaseURL } from "../src";
 
 describe("get endpoint", () => {
