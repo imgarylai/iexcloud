@@ -22,14 +22,14 @@ describe("get endpoint", () => {
     expect(baseURL).toBe("https://cloud.iexapis.com/stable");
   });
 
-  test("production endpoint is with stable version https://cloud.iexapis.com/stable", () => {
+  test("stable production endpoint set by process.env is https://cloud.iexapis.com/stable", () => {
     process.env.IEX_ENV = "cloud";
     process.env.IEX_VERSION = "stable";
     const { baseURL } = getBaseURL();
     expect(baseURL).toBe("https://cloud.iexapis.com/stable");
   });
 
-  test("production endpoint is with stable version https://cloud.iexapis.com/stable", () => {
+  test("stable production endpoint set by parameters is https://cloud.iexapis.com/stable", () => {
     const { baseURL } = getBaseURL("cloud", "stable");
     expect(baseURL).toBe("https://cloud.iexapis.com/stable");
   });

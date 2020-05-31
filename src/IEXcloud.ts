@@ -1,10 +1,11 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import * as dotenv from "dotenv";
 dotenv.config();
+
 export const getBaseURL = (
-  iex_env: string = "sandbox",
-  iex_version: string = "stable"
-) => {
+  iex_env = "sandbox",
+  iex_version = "stable"
+): { baseURL: string } => {
   const IEX_ENV = process.env.IEX_ENV || iex_env;
   const IEX_VERSION = process.env.IEX_VERSION || iex_version;
 
@@ -12,7 +13,10 @@ export const getBaseURL = (
   return { baseURL };
 };
 
-export const APIRequest = async (url, options = {}) => {
+export const APIRequest = async (
+  url: string,
+  options = {}
+): Promise<AxiosResponse> => {
   const { baseURL } = getBaseURL();
   const token = process.env.IEX_API_TOKEN;
   try {
@@ -25,6 +29,6 @@ export const APIRequest = async (url, options = {}) => {
       },
     });
   } catch (e) {
-    throw e;
+    return e;
   }
 };
