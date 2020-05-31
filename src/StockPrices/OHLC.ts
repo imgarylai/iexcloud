@@ -1,6 +1,6 @@
 import { OHLC } from "../Interfaces";
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 
 export const ohlc = async (symbol: string): Promise<Partial<OHLC>> => {
-  return await StockPricesApi(symbol, "ohlc");
+  return await StockApi(symbol, "ohlc");
 };

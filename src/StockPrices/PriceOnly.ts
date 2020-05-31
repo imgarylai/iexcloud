@@ -1,6 +1,6 @@
 import { PriceOnly } from "../Interfaces";
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 
 export const price = async (symbol: string): Promise<Partial<PriceOnly>> => {
-  return await StockPricesApi(symbol, "price");
+  return await StockApi(symbol, "price");
 };

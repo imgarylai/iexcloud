@@ -1,4 +1,4 @@
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 import { Quote } from "../Interfaces";
 
 export const quote = async (
@@ -6,5 +6,5 @@ export const quote = async (
   field?: string
 ): Promise<Partial<Quote>> => {
   const endpoint = field ? `quote/${field}` : `quote`;
-  return await StockPricesApi(symbol, endpoint);
+  return await StockApi(symbol, endpoint);
 };

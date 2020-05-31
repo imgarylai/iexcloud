@@ -1,4 +1,4 @@
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 import { IntradayPrices, IntradayPricesOption } from "../Interfaces";
 
 export const intradayPrices = async (
@@ -7,5 +7,5 @@ export const intradayPrices = async (
 ): Promise<
   ReadonlyArray<Partial<IntradayPrices>> | Partial<IntradayPrices>
 > => {
-  return await StockPricesApi(symbol, "intraday-prices", options);
+  return await StockApi(symbol, "intraday-prices", options);
 };

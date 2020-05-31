@@ -1,6 +1,6 @@
 import { APIRequest } from "./core";
 
-export const StockPricesApi = async (
+export const StockApi = async (
   symbol: string,
   endpoint: string,
   // eslint-disable-next-line @typescript-eslint/ban-types

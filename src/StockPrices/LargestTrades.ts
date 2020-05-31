@@ -1,8 +1,8 @@
 import { LargestTrades } from "../Interfaces";
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 
 export const largestTrades = async (
   symbol: string
 ): Promise<Partial<LargestTrades>> => {
-  return await StockPricesApi(symbol, "largest-trades");
+  return await StockApi(symbol, "largest-trades");
 };

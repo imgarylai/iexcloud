@@ -1,4 +1,4 @@
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 import { Range } from "../Types";
 import { HistoricalPrice, HistoricalPriceOption } from "../Interfaces";
 
@@ -13,5 +13,5 @@ export const historicalPrice = async (
   const endpoint = `chart/${[range, date]
     .filter((x) => typeof x === "string")
     .join("/")}`;
-  return await StockPricesApi(symbol, endpoint, options);
+  return await StockApi(symbol, endpoint, options);
 };

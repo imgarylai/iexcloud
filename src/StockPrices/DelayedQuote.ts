@@ -1,9 +1,9 @@
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 import { DelayedQuote, DelayedQuoteOption } from "../Interfaces";
 
 export const delayedQuote = async (
   symbol: string,
   options: Partial<DelayedQuoteOption> = {}
 ): Promise<Partial<DelayedQuote>> => {
-  return await StockPricesApi(symbol, "delayed-quote", options);
+  return await StockApi(symbol, "delayed-quote", options);
 };

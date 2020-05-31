@@ -1,8 +1,8 @@
 import { VolumeByVenue } from "../Interfaces";
-import { StockPricesApi } from "../API";
+import { StockApi } from "../API";
 
 export const volumeByVenue = async (
   symbol: string
 ): Promise<Partial<VolumeByVenue>> => {
-  return await StockPricesApi(symbol, "volume-by-venue");
+  return await StockApi(symbol, "volume-by-venue");
 };
