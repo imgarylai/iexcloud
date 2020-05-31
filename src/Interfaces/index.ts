@@ -6,4 +6,5 @@ export * from "./HistoricalPriceOption";
 export * from "./IntradayPrices";
 export * from "./IntradayPricesOption";
 export * from "./LargestTrades";
+export * from "./OHLC";
 export * from "./Quote";
