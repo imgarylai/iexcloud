@@ -11,15 +11,15 @@ describe("get endpoint", () => {
     process.env = OLD_ENV;
   });
 
-  test("default endpoint is https://sandbox.iexapis.com/v1/", () => {
+  test("default endpoint is https://sandbox.iexapis.com/stable", () => {
     const { baseURL } = getBaseURL();
-    expect(baseURL).toBe("https://sandbox.iexapis.com/v1");
+    expect(baseURL).toBe("https://sandbox.iexapis.com/stable");
   });
 
-  test("production endpoint with v1 version is https://cloud.iexapis.com/v1", () => {
+  test("production endpoint with v1 version is https://cloud.iexapis.com/stable", () => {
     process.env.IEX_ENV = "cloud";
     const { baseURL } = getBaseURL();
-    expect(baseURL).toBe("https://cloud.iexapis.com/v1");
+    expect(baseURL).toBe("https://cloud.iexapis.com/stable");
   });
 
   test("production endpoint is with stable version https://cloud.iexapis.com/stable", () => {
